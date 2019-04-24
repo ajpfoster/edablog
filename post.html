@@ -77,40 +77,41 @@
         <div class="col-lg-8 col-md-10 mx-auto">
           <p>Hi team! Gonna have a go at explaining best practises for the css selectors class and id.</p>
 
-          <p>The general rule of thumb is if the element you are styling will be used more than once make it a class</p>
+          <p>The general rule of thumb is if the element you are styling will be used more than once make it a class - classes are easier to handle and can always be overriden</p>
 
-          <p>This allows us the benefit of 2 things. 1 - You are able to the id selector for individual styling of specific elements and 2.</p>
+          <p>This allows us the benefit of 2 things. 1 - You are able to still use the id selector for individual styling of specific elements and 2.</p>
 
           <h2 class="section-heading">Class Inheritance</h2>
 
-          <p>Class inheritance is an important feature of CSS (read programming) in that it allows us to pass attributes or styling of an identified class of elements to multiple instances of that element.</p>
+          <p>Class inheritance is an important feature of CSS (read programming) in that it allows us to pass attributes or styling to an identified class of elements INCLUDING multiple instances of that element AND child classes or sub classes of that element.</p>
 
           <a href="img/2_blog_1.jpg"> <!-- I don't like this way of presenting the image -->
             <img class="img-fluid" src="img/2_blog_1.jpg" alt="">
           </a>
-          <blockquote class="blockquote"></blockquote>
+          <blockquote class="blockquote">Fig 1. Above using dev tools we are able to inspect that the highlighted element is an unordered list with the class of list-inline and text-center with parent classes of "row" and "container".</blockquote>
 
-          <p>Spaceflights cannot be stopped. This is not the work of any one man or even a group of men. It is a historical process which mankind is carrying out in accordance with the natural laws of human development.</p>
+          <p>Please excuse the bad resolution of screen clippings - you should be able to zoom in or click the image. </p>
 
-          <h2 class="section-heading">When to use ids?</h2>
+          <h2 class="section-heading">When to use ids?.... Never?</h2>
 
           <a href="img/2_blog_2.jpg">
             <img class="img-fluid" src="img/2_blog_2.jpg" alt="">
           </a>
-          
-          <p>As we got further and further away, it [the Earth] diminished in size. Finally it shrank to the size of a marble, the most beautiful you can imagine. That beautiful, warm, living object looked so fragile, so delicate, that if you touched it with a finger it would crumble and fall apart. Seeing this has to change a man.</p>
+          <span class="caption text-muted">Fig 2. List element with class of list-inline-item. Note parent classes at the bottom. </span>
+
+          <p>Take a look at these images in the code I have tried to illustrate how even though I passed the second item in the list as a block item - it inherited it's inline attributes and overid them.</p>
 
           <a href="img/2_blog_3.jpg">
             <img class="img-fluid" src="img/2_blog_3.jpg" alt="">
           </a>
-          <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+          <span class="caption text-muted">Fig 3. List element with class list-block-item overiding unordered list class "list-inline text-center".</span>
 
-          <p>Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.</p>
+          <p>Class selectors in CSS help developers save time by cutting out redundant (repeitive) code. It also helps when maintaining or updating as it provides a clear framework for the look and feel of sites design.</p>
 
           <a href="img/2_blog_4.jpg">
             <img class="img-fluid " src="img/2_blog_4.jpg" alt="">
           </a>
-          <span class="caption text-muted">To go places and do things that have never been done before – that’s what living is all about.</span>
+          <span class="caption text-muted">Fig 4. Corrected class for unordered list of social links</span>
         </div>
       </div>
     </div>
