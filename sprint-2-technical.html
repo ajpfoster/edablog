@@ -8,7 +8,7 @@
   <meta name="description" content="EDA Foundations Blog">
   <meta name="author" content="Ash Foster">
 
-  <title>Ash Foster - EDA Blog</title>
+  <title>Ash Foster</title>
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,17 +35,17 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
-          <!-- <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="index.html">Home</a>
           </li> -->
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Blog</a>
+            <a class="nav-link" href="post.html">Blog</a>
           </li>
-         <!-- <li class="nav-item">
-            <a class="nav-link" href="sprint2-cultural.html">Contact</a>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
           </li> -->
         </ul>
       </div>
@@ -53,77 +53,69 @@
   </nav>
 
   <!-- Page Header -->
-  <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
     <div class="overlay"></div>
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="site-heading">
-            <h1>EDA FOUNDATIONS</h1>
-            <span class="subheading">A Blog by Ash Foster</span>
+          <div class="post-heading">
+            <h1>What are the best practices associated with using classes vs. ids?</h1>
+            <h2 class="subheading">Sprint 2 - Technical Blog</h2>
+            <span class="meta">Posted by
+              <a href="#">Ash Foster</a>
+	      on April 24, 2019</span>
           </div>
         </div>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-          <div class="post-preview">
-              <a href="sprint-2-cultural.html">
-                <h2 class="post-title">
-                  Learning Plan 
-                </h2>
-              </a>
-              <p class="post-meta">Posted by
-                <a href="#">Ash Foster</a>
-                on April 28th, 2019</p>
-        </div>
-        <div class="post-preview">
-              <a href="sprint-1-cultural.html">
-                <h2 class="post-title">
-                  Identity, Values and Strengths Exploration 
-                </h2>
-              </a>
-              <p class="post-meta">Posted by
-                <a href="#">Ash Foster</a>
-                on April 28th, 2019</p>
-        </div>
-        <div class="post-preview">
-          <a href="post.html">
-            <h2 class="post-title">
-              Sprint 2 Technical blog 
-            </h2>
-            <h3 class="post-subtitle">
-              CSS Selectors - class vs id
-            </h3>
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <p>Hi team! Gonna have a go at explaining best practises for the css selectors class and id.</p>
+
+          <p>The general rule of thumb is if the element you are styling will be used more than once make it a class - classes are easier to handle and can always be overriden.</p>
+
+          <p>This allows us the benefit of 2 things. 1 - You are able to still use the id selector for individual styling of specific elements and 2.</p>
+
+          <h2 class="section-heading">Class Inheritance</h2>
+
+          <p>Class inheritance is an important feature of CSS (read programming) in that it allows us to pass attributes or styling to an identified class of elements INCLUDING multiple instances of that element AND child classes or sub classes of that element.</p>
+
+          <a href="img/2_blog_1.jpg"> <!-- I don't like this way of presenting the image -->
+            <img class="img-fluid" src="img/2_blog_1.jpg" alt="">
           </a>
-          <p class="post-meta">Posted by
-            <a href="#">Ash Foster</a>
-            on April 24, 2019</p>
-        </div>
-        <hr>
-        <div class="post-preview">
-          <a href="about.html">
-            <h2 class="post-title">
-              Mihi korero for Sprint 1
-            </h2>
+          <blockquote class="blockquote">Fig 1. Above using dev tools we are able to inspect that the highlighted element is an unordered list with the class of list-inline and text-center with parent classes of "row" and "container".</blockquote>
+
+          <p>Please excuse the bad resolution of screen clippings - you should be able to zoom in or click the image. </p>
+
+          <h2 class="section-heading">When to use ids?... Never?</h2>
+
+          <a href="img/2_blog_2.jpg">
+            <img class="img-fluid" src="img/2_blog_2.jpg" alt="">
           </a>
-          <p class="post-meta">Posted by
-            <a href="#">Ash Foster</a>
-            on April 19th, 2019</p>
+          <span class="caption text-muted">Fig 2. List element with class of list-inline-item. Note parent classes at the bottom. </span>
+
+          <p>Take a look at these images in the code I have tried to illustrate how even though I passed the second item in the list as a block item - it inherited it's inline attributes and overid them.</p>
+
+          <a href="img/2_blog_3.jpg">
+            <img class="img-fluid" src="img/2_blog_3.jpg" alt="">
+          </a>
+          <span class="caption text-muted">Fig 3. List element with class list-block-item overiding unordered list class "list-inline text-center".</span>
+
+          <p>The id selector is useful for styling unique elements but largely even these can be refactored to a class. Class selectors in CSS help developers save time by cutting out redundant (repetitive) code. It also helps when maintaining or updating as it provides a clear framework for the look and feel of a sites design.</p>
+
+          <a href="img/2_blog_4.jpg">
+            <img class="img-fluid " src="img/2_blog_4.jpg" alt="">
+          </a>
+          <span class="caption text-muted">Fig 4. Corrected class for unordered list of social links</span>
         </div>
-        
-        <hr>
-        <!-- Pager -->
-        <!--div class="clearfix">
-          <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
-	      </di> -->
       </div>
     </div>
-  </div>
+  </article>
 
   <hr>
 
